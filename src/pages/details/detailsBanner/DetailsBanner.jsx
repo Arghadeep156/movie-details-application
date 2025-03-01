@@ -43,7 +43,7 @@ export const DetailsBanner = ({ video, crew }) => {
             <React.Fragment>
               <div>
                 <div className="backdrop-img">
-                  <Img src={url.baackdrop + data.backdrop_path} />
+                  <Img src={url.backdrop + data.backdrop_path} />
                 </div>
               </div>
               <div className="opacity-layer"></div>

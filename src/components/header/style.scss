@@ -29,8 +29,19 @@
     }
     .logo {
         cursor: pointer;
+        display: flex; /* Align the image and text horizontally */
+        align-items: center; /* Vertically center both the image and the heading */
+        gap: 1px;
+
         img {
             height: 50px;
+        }
+        
+        .logoText { /* Style the heading tag (e.g., <h1>) */
+            color: white; /* White text color */
+            margin-left: 1px; /* Space between the logo image and the heading text */
+            font-size: 24px; /* Adjust font size */
+            font-weight: bold; /* Make the text bold */
         }
     }
     .menuItems {

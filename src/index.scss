@@ -10,14 +10,16 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --black: #04152d;
-  --black2: #041226;
-  --black3: #020c1b;
-  --black-lighter: #1c4b91;
-  --black-light: #173d77;
-  --pink: #da2f68;
-  --orange: #f89e00;
-  --gradient: linear-gradient(98.37deg, #00f83e 0.99%, #ccda2f 100%);
+  /* Black and grey shades */
+  --black: #121212; /* Very dark grey (almost black) */
+  --black2: #1e1e1e; /* Dark grey */
+  --black3: #2a2a2a; /* Medium-dark grey */
+  --black4: #333333; /* Medium grey */
+  --grey-light: #666666; /* Light grey */
+  --grey-lighter: #999999; /* Lighter grey */
+  --pink: #da2f68; /* Accent color (pink) */
+  --orange: #f89e00; /* Accent color (orange) */
+  --gradient: linear-gradient(98.37deg, #00f83e 0.99%, #ccda2f 100%); /* Green to yellow gradient */
 }
 
 * {
@@ -27,7 +29,8 @@
 }
 
 body {
-  background-color: var(--black);
+  background-color: var(--black); /* Very dark background */
+  color: var(--grey-light); /* Light grey text for contrast */
 }
 
 ::-webkit-scrollbar {
@@ -37,7 +40,8 @@ body {
 .skeleton {
   position: relative;
   overflow: hidden;
-  background-color: #0a2955;
+  background-color: var(--black2); /* Dark grey background for skeleton loader */
+  
   &::after {
       position: absolute;
       top: 0;
@@ -47,10 +51,10 @@ body {
       transform: translateX(-100%);
       background-image: linear-gradient(
           90deg,
-          rgba(#193763, 0) 0,
-          rgba(#193763, 0.2) 20%,
-          rgba(#193763, 0.5) 60%,
-          rgba(#193763, 0)
+          rgba(255, 255, 255, 0) 0,
+          rgba(255, 255, 255, 0.2) 20%,
+          rgb(18, 18, 18) 60%,
+          rgba(255, 255, 255, 0) 100%
       );
       animation: shimmer 2s infinite;
       content: "";
